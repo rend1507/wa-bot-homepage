@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Demo bot WhatsApp plus inbox staf. Simulasi di browser, data di perangkat Anda." />
+  <meta name="theme-color" content="#075e54" />
+  <title>Demo · Bot WhatsApp + Inbox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-demo">
+  <a class="skip" href="#demo-app">Langsung ke demo</a>
+
+  <header class="top top-demo">
+    <a class="logo" href="index.html">WA <span>Bot</span></a>
+    <nav class="nav" aria-label="Utama">
+      <a href="index.html">Beranda</a>
+      <button type="button" class="btn btn-ghost btn-small" id="btn-reset">Reset demo</button>
+    </nav>
+  </header>
+
+  <div class="view-switch" role="tablist" aria-label="Ganti jendela">
+    <button type="button" class="tab is-active" role="tab" aria-selected="true" data-view="user">Chat pelanggan</button>
+    <button type="button" class="tab" role="tab" aria-selected="false" data-view="inbox">Inbox staf</button>
+  </div>
+
+  <main class="demo-app" id="demo-app">
+    <section class="user-pane is-on" id="pane-user" aria-label="Chat pelanggan">
+      <div class="user-head">
+        <strong>Bot Demo</strong>
+        <span class="sub">Chat pelanggan</span>
+      </div>
+      <div class="chat-log user-log" id="user-log" aria-live="polite"></div>
+      <form class="composer" id="form-user">
+        <label class="skip" for="input-user">Pesan</label>
+        <input id="input-user" name="message" type="text" autocomplete="off" placeholder="Ketik pesan…" required maxlength="500" />
+        <button class="btn btn-brand" type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <section class="inbox-pane" id="pane-inbox" aria-label="Inbox staf" hidden>
+      <div class="list-col">
+        <div class="list-head">
+          <div class="list-head-top">
+            <strong>Antrean chat</strong>
+            <span class="live on"><span class="live-dot" aria-hidden="true"></span> Demo aktif</span>
+          </div>
+          <div class="list-filters" role="group" aria-label="Filter antrean">
+            <button type="button" class="chip on" data-filter="all">Semua <span class="n" id="n-all">0</span></button>
+            <button type="button" class="chip" data-filter="wait">Menunggu <span class="n" id="n-wait">0</span></button>
+            <button type="button" class="chip admin" data-filter="admin">Admin <span class="n" id="n-admin">0</span></button>
+            <button type="button" class="chip bot" data-filter="bot">Bot <span class="n" id="n-bot">0</span></button>
+          </div>
+        </div>
+        <div class="list-search">
+          <label class="skip" for="search-inbox">Cari</label>
+          <input id="search-inbox" type="search" placeholder="Cari nama, nomor, atau isi…" autocomplete="off" />
+        </div>
+        <div class="chat-list colorize" id="chat-list"></div>
+      </div>
+
+      <div class="thread-col">
+        <div class="thread-head" id="thread-head">
+          <div class="thread-title">
+            <strong id="thread-name">Pilih chat</strong>
+            <span class="head-mode" id="head-mode"></span>
+          </div>
+          <div class="thread-actions">
+            <button type="button" class="btn btn-small btn-ghost-light" id="btn-takeover" hidden>Ambil alih</button>
+            <button type="button" class="btn btn-small btn-ghost-light" id="btn-return-bot" hidden>Kembalikan bot</button>
+          </div>
+        </div>
+        <div class="mode-banner" id="mode-banner" hidden></div>
+        <div class="chat-log staff-log" id="staff-log"></div>
+        <div class="composer staff-composer">
+          <label class="skip" for="input-staff">Balasan staf</label>
+          <input id="input-staff" type="text" placeholder="Ambil alih dulu untuk membalas…" maxlength="500" disabled />
+          <button class="btn btn-brand" type="button" id="btn-reply" disabled>Kirim</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/demo.js" defer></script>
+</body>
+</html>
