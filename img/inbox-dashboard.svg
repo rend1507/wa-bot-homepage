@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Pratinjau inbox staf WA Bot</title>
+  <desc id="desc">Contoh inbox dengan daftar chat, filter status, dan percakapan yang sedang ditangani admin.</desc>
+  <rect x="1" y="1" width="1198" height="718" rx="22" fill="#fff" stroke="#d7dfd9" stroke-width="2"/>
+  <path d="M22 2h1156a20 20 0 0 1 20 20v56H2V22A20 20 0 0 1 22 2Z" fill="#103f33"/>
+  <g font-family="Arial, sans-serif">
+    <circle cx="32" cy="40" r="7" fill="#c9ef74"/>
+    <circle cx="54" cy="40" r="7" fill="#9cb5a7"/>
+    <circle cx="76" cy="40" r="7" fill="#9cb5a7"/>
+    <text x="108" y="47" fill="#fff" font-size="21" font-weight="700">Inbox staf</text>
+    <text x="1140" y="45" fill="#d7e5dc" font-size="15" text-anchor="end">PRATINJAU</text>
+
+    <rect x="2" y="78" width="380" height="640" fill="#f7f9f7"/>
+    <text x="32" y="125" fill="#17241f" font-size="24" font-weight="700">Antrean chat</text>
+    <rect x="30" y="148" width="82" height="36" rx="18" fill="#103f33"/>
+    <text x="71" y="171" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">Semua</text>
+    <rect x="120" y="148" width="112" height="36" rx="18" fill="#fff" stroke="#d9e0d9"/>
+    <circle cx="139" cy="166" r="5" fill="#bd780f"/>
+    <text x="179" y="171" fill="#52635b" font-size="14" font-weight="600" text-anchor="middle">Menunggu</text>
+    <rect x="240" y="148" width="78" height="36" rx="18" fill="#fff" stroke="#d9e0d9"/>
+    <text x="279" y="171" fill="#52635b" font-size="14" font-weight="600" text-anchor="middle">Admin</text>
+
+    <rect x="22" y="202" width="338" height="86" rx="12" fill="#fff4dd"/>
+    <circle cx="57" cy="245" r="20" fill="#d88b14"/>
+    <text x="57" y="251" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">A</text>
+    <text x="92" y="235" fill="#17241f" font-size="17" font-weight="700">Pelanggan A</text>
+    <text x="92" y="260" fill="#52635b" font-size="14">Jam bukanya sampai jam berapa?</text>
+    <text x="332" y="235" fill="#8a6a37" font-size="12" text-anchor="end">MENUNGGU</text>
+
+    <rect x="22" y="298" width="338" height="86" rx="12" fill="#e8f3ec"/>
+    <circle cx="57" cy="341" r="20" fill="#53665e"/>
+    <text x="57" y="347" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">B</text>
+    <text x="92" y="331" fill="#17241f" font-size="17" font-weight="700">Pelanggan B</text>
+    <text x="92" y="356" fill="#52635b" font-size="14">Boleh bicara dengan staf?</text>
+    <text x="332" y="331" fill="#53665e" font-size="12" text-anchor="end">ADMIN</text>
+
+    <rect x="22" y="394" width="338" height="86" rx="12" fill="#e9f2f4"/>
+    <circle cx="57" cy="437" r="20" fill="#267c88"/>
+    <text x="57" y="443" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">C</text>
+    <text x="92" y="427" fill="#17241f" font-size="17" font-weight="700">Pelanggan C</text>
+    <text x="92" y="452" fill="#52635b" font-size="14">Lokasinya di mana?</text>
+    <text x="332" y="427" fill="#267c88" font-size="12" text-anchor="end">BOT</text>
+
+    <path d="M382 79v639" stroke="#d9e0d9" stroke-width="2"/>
+    <rect x="384" y="80" width="814" height="76" fill="#fff"/>
+    <text x="420" y="113" fill="#17241f" font-size="20" font-weight="700">Pelanggan B</text>
+    <text x="420" y="137" fill="#53665e" font-size="14">MODE ADMIN</text>
+    <rect x="1057" y="99" width="112" height="38" rx="8" fill="#103f33"/>
+    <text x="1113" y="123" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">Kembalikan bot</text>
+    <path d="M384 156h814" stroke="#d9e0d9" stroke-width="2"/>
+    <rect x="384" y="158" width="814" height="45" fill="#e8edf2"/>
+    <text x="420" y="186" fill="#334155" font-size="14" font-weight="600">Admin sedang menangani percakapan ini. Bot tidak membalas.</text>
+
+    <rect x="384" y="203" width="814" height="454" fill="#f0eee8"/>
+    <rect x="420" y="235" width="390" height="66" rx="12" fill="#fff"/>
+    <text x="442" y="262" fill="#17241f" font-size="15">Boleh bicara dengan staf?</text>
+    <text x="442" y="283" fill="#738078" font-size="12">Pelanggan · 10.42</text>
+    <rect x="740" y="321" width="418" height="66" rx="12" fill="#d9fdd3"/>
+    <text x="762" y="348" fill="#17241f" font-size="15">Tentu. Saya bantu cek dulu, ya.</text>
+    <text x="762" y="369" fill="#738078" font-size="12">Admin · 10.43</text>
+    <rect x="420" y="407" width="440" height="66" rx="12" fill="#fff"/>
+    <text x="442" y="434" fill="#17241f" font-size="15">Terima kasih, saya mau tanya soal pesanan.</text>
+    <text x="442" y="455" fill="#738078" font-size="12">Pelanggan · 10.44</text>
+    <rect x="384" y="657" width="814" height="61" fill="#fff"/>
+    <rect x="408" y="669" width="722" height="38" rx="19" fill="#f7f9f7" stroke="#d9e0d9"/>
+    <text x="430" y="694" fill="#738078" font-size="14">Ketik balasan admin...</text>
+    <circle cx="1160" cy="688" r="20" fill="#103f33"/>
+    <path d="m1153 688 13-7-4 14-3-5-6-2Z" fill="#fff"/>
+  </g>
+</svg>

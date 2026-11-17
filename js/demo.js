@@ -127,12 +127,24 @@
   const searchInbox = document.getElementById("search-inbox");
   const paneUser = document.getElementById("pane-user");
   const paneInbox = document.getElementById("pane-inbox");
+  const btnBackList = document.getElementById("btn-back-list");
   const viewTabs = document.querySelectorAll(".view-switch .tab");
   const filterChips = document.querySelectorAll(".list-filters .chip");
-  const nAll = document.getElementById("n-all");
-  const nWait = document.getElementById("n-wait");
-  const nAdmin = document.getElementById("n-admin");
-  const nBot = document.getElementById("n-bot");
+  const countEls = {
+    all: [document.getElementById("n-all")],
+    wait: [document.getElementById("n-wait")],
+    admin: [document.getElementById("n-admin")],
+    bot: [document.getElementById("n-bot")],
+  };
+
+  function isMobileInbox() {
+    return window.matchMedia("(max-width: 720px)").matches;
+  }
+
+  function setThreadOpen(open) {
+    paneInbox.classList.toggle("show-thread", Boolean(open));
+    if (btnBackList) btnBackList.hidden = !open || !isMobileInbox();
+  }
 
   function mainThread() {
     return state.threads.find((t) => t.id === "t_main") || state.threads[0];
@@ -214,10 +226,11 @@
 
   function renderList() {
     const c = counts();
-    nAll.textContent = String(c.all);
-    nWait.textContent = String(c.wait);
-    nAdmin.textContent = String(c.admin);
-    nBot.textContent = String(c.bot);
+    Object.keys(countEls).forEach((key) => {
+      countEls[key].forEach((el) => {
+        if (el) el.textContent = String(c[key]);
+      });
+    });
 
     filterChips.forEach((chip) => {
       const f = chip.getAttribute("data-filter");
@@ -240,7 +253,9 @@
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = `item st-${thread.mode}`;
-      if (thread.id === state.activeId) btn.classList.add("active");
+      if (thread.id === state.activeId && (!isMobileInbox() || paneInbox.classList.contains("show-thread"))) {
+        btn.classList.add("active");
+      }
 
       const av = document.createElement("span");
       av.className = `avatar ${thread.mode}`;
@@ -276,6 +291,7 @@
       btn.addEventListener("click", () => {
         state.activeId = thread.id;
         save();
+        if (isMobileInbox()) setThreadOpen(true);
         renderAll();
       });
       chatList.appendChild(btn);
@@ -369,6 +385,8 @@
   }
 
   function renderAll() {
+    if (!isMobileInbox()) setThreadOpen(false);
+    else if (btnBackList) btnBackList.hidden = !paneInbox.classList.contains("show-thread");
     renderUserChat();
     renderList();
     renderStaffChat();
@@ -514,6 +532,7 @@
     paneUser.classList.toggle("is-on", showUser);
     paneInbox.hidden = showUser;
     paneInbox.classList.toggle("is-active", !showUser);
+    if (showUser || !isMobileInbox()) setThreadOpen(false);
   }
 
   viewTabs.forEach((tab) => {
@@ -522,7 +541,20 @@
     });
   });
 
+  if (btnBackList) {
+    btnBackList.addEventListener("click", () => {
+      setThreadOpen(false);
+      renderList();
+    });
+  }
+
+  window.addEventListener("resize", () => {
+    if (!isMobileInbox()) setThreadOpen(false);
+    else if (btnBackList) btnBackList.hidden = !paneInbox.classList.contains("show-thread");
+  });
+
   searchInbox.value = state.search || "";
   setMobileView("user");
+  setThreadOpen(false);
   renderAll();
 })();

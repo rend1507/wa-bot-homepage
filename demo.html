@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Demo bot WhatsApp plus inbox staf. Simulasi di browser, data di perangkat Anda." />
-  <meta name="theme-color" content="#075e54" />
-  <title>Demo · Bot WhatsApp + Inbox</title>
+  <meta name="theme-color" content="#103f33" />
+  <title>Demo · WA Bot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,12 +14,14 @@
 <body class="page-demo">
   <a class="skip" href="#demo-app">Langsung ke demo</a>
 
-  <header class="top top-demo">
-    <a class="logo" href="index.html">WA <span>Bot</span></a>
-    <nav class="nav" aria-label="Utama">
-      <a href="index.html">Beranda</a>
-      <button type="button" class="btn btn-ghost btn-small" id="btn-reset">Reset demo</button>
-    </nav>
+  <header class="demo-chrome">
+    <div class="demo-chrome-inner">
+      <a class="demo-logo" href="index.html" aria-label="WA Bot, beranda">WA <b>Bot</b></a>
+      <nav class="demo-nav" aria-label="Navigasi demo">
+        <a href="index.html">Beranda</a>
+        <button type="button" class="demo-reset" id="btn-reset">Reset demo</button>
+      </nav>
+    </div>
   </header>
 
   <div class="view-switch" role="tablist" aria-label="Ganti jendela">
@@ -42,7 +44,7 @@
     </section>
 
     <section class="inbox-pane" id="pane-inbox" aria-label="Inbox staf" hidden>
-      <div class="list-col">
+      <div class="list-col" id="list-col">
         <div class="list-head">
           <div class="list-head-top">
             <strong>Antrean chat</strong>
@@ -56,14 +58,20 @@
           </div>
         </div>
         <div class="list-search">
-          <label class="skip" for="search-inbox">Cari</label>
-          <input id="search-inbox" type="search" placeholder="Cari nama, nomor, atau isi…" autocomplete="off" />
+          <span class="search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M10.5 3a7.5 7.5 0 0 1 5.9 12.1l3.8 3.7a1 1 0 0 1-1.4 1.4l-3.8-3.7A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/></svg>
+          </span>
+          <label class="visually-hidden" for="search-inbox">Cari chat</label>
+          <input id="search-inbox" type="search" placeholder="Cari chat…" autocomplete="off" />
         </div>
         <div class="chat-list colorize" id="chat-list"></div>
       </div>
 
-      <div class="thread-col">
+      <div class="thread-col" id="thread-col">
         <div class="thread-head" id="thread-head">
+          <button type="button" class="btn-back-list" id="btn-back-list" aria-label="Kembali ke daftar kontak" hidden>
+            <span aria-hidden="true">←</span>
+          </button>
           <div class="thread-title">
             <strong id="thread-name">Pilih chat</strong>
             <span class="head-mode" id="head-mode"></span>
