@@ -1,26 +1,29 @@
 :root {
-  --ink: #111b21;
-  --paper: #f0f2f5;
+  /* Brand tokens — selaras DESIGN.md / home.css (Minimalism) */
+  --ink: #17241f;
+  --paper: #f5f6ef;
   --panel: #ffffff;
-  --line: #d1d7db;
-  --muted: #667781;
-  --brand: #075e54;
-  --brand2: #128c7e;
-  --brand-deep: #054c44;
-  --accent: #c47a00;
+  --line: #d9e0d9;
+  --muted: #52635b;
+  --brand: #103f33;
+  --brand2: #41835d;
+  --brand-deep: #0c3027;
+  --accent: #e3a940;
   --user-head: #0f766e;
   --bot-head: #0e7490;
   --admin-head: #475569;
   --chat-bg: #eae6df;
   --mine: #d9fdd3;
-  --wait: #c47a00;
+  --wait: #bd780f;
   --sans: "IBM Plex Sans", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --max: 72rem;
-  --radius: 8px;
-  --focus: 2px solid var(--accent);
+  --radius: 6px;
+  --focus: 3px solid var(--accent);
   --pad-x: clamp(1.25rem, 4vw, 2rem);
   --pad-y: clamp(2.75rem, 5vw, 3.75rem);
+  --duration: 180ms;
+  --shadow: none;
 }
 
 *,
@@ -185,17 +188,7 @@ input:focus-visible {
   display: block;
 }
 
-.theme-toggle .icon-sun {
-  display: none;
-}
 
-html[data-theme="dark"] .theme-toggle .icon-moon {
-  display: none;
-}
-
-html[data-theme="dark"] .theme-toggle .icon-sun {
-  display: block;
-}
 
 /* Homepage */
 .hero {
@@ -649,8 +642,13 @@ html[data-theme="dark"] .theme-toggle .icon-sun {
   --demo-muted: #52635b;
   --demo-paper: #f5f6ef;
   --demo-green: #103f33;
+  --demo-green-hover: #205849;
+  --demo-green-mid: #41835d;
   --demo-lime: #c9ef74;
   --demo-line: #d9e0d9;
+  --demo-header-bg: color-mix(in srgb, var(--demo-paper) 96%, transparent);
+  --demo-radius: 6px;
+  --demo-duration: 180ms;
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
@@ -660,9 +658,10 @@ html[data-theme="dark"] .theme-toggle .icon-sun {
   color: var(--demo-ink);
 }
 
+
 .page-demo .demo-chrome {
   flex-shrink: 0;
-  background: rgba(245, 246, 239, 0.96);
+  background: var(--demo-header-bg);
   border-bottom: 1px solid var(--demo-line);
 }
 
@@ -684,7 +683,7 @@ html[data-theme="dark"] .theme-toggle .icon-sun {
 }
 
 .page-demo .demo-logo b {
-  color: #41835d;
+  color: var(--demo-green-mid);
 }
 
 .page-demo .demo-nav {
@@ -709,16 +708,22 @@ html[data-theme="dark"] .theme-toggle .icon-sun {
   min-height: 2.35rem;
   padding: 0.4rem 0.85rem;
   border: 1px solid transparent;
-  border-radius: 0.45rem;
+  border-radius: var(--demo-radius);
   background: var(--demo-green);
   color: #fff;
   font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
+  transition: background-color var(--demo-duration) ease;
 }
 
 .page-demo .demo-reset:hover {
-  background: #205849;
+  background: var(--demo-green-hover);
+}
+
+.page-demo .demo-reset:focus-visible {
+  outline: var(--focus);
+  outline-offset: 2px;
 }
 
 .page-demo .visually-hidden {
@@ -738,9 +743,10 @@ html[data-theme="dark"] .theme-toggle .icon-sun {
   gap: 0.45rem;
   flex-shrink: 0;
   padding: 0.55rem clamp(1rem, 3vw, 1.5rem);
-  background: #fff;
+  background: var(--panel);
   border-bottom: 1px solid var(--demo-line);
 }
+
 
 .view-switch .tab {
   flex: 1;
@@ -765,12 +771,21 @@ html[data-theme="dark"] .theme-toggle .icon-sun {
 }
 
 .demo-app {
+  /* Jendela chat produk: selalu light, tidak ikut chrome dark mode */
+  --ink: #111b21;
+  --paper: #f0f2f5;
+  --panel: #ffffff;
+  --line: #d1d7db;
+  --muted: #667781;
+  --brand: #075e54;
+  --brand2: #128c7e;
+  --brand-deep: #054c44;
   flex: 1;
   min-height: 0;
   display: flex;
   flex-direction: column;
-  color: #111b21;
-  background: #fff;
+  color: var(--ink);
+  background: var(--panel);
 }
 
 .demo-app input,
@@ -778,13 +793,13 @@ html[data-theme="dark"] .theme-toggle .icon-sun {
 .demo-app .item,
 .demo-app .preview,
 .demo-app .empty {
-  color: #111b21;
+  color: var(--ink);
 }
 
 .demo-app .list-search input,
 .demo-app .composer input {
-  color: #111b21;
-  background: #fff;
+  color: var(--ink);
+  background: var(--panel);
 }
 
 .user-pane,
@@ -1471,32 +1486,6 @@ html[data-theme="dark"] .theme-toggle .icon-sun {
   color: var(--muted);
 }
 
-html[data-theme="dark"] {
-  --ink: #e9edef;
-  --paper: #0b141a;
-  --panel: #111b21;
-  --line: #2a3942;
-  --muted: #aebac1;
-  --brand-deep: #7dcea0;
-}
-
-html[data-theme="dark"] .btn-ghost {
-  border-color: #aebac1;
-  color: #e9edef;
-}
-
-html[data-theme="dark"] .btn-ghost:hover:not(:disabled) {
-  background: #e9edef;
-  color: #111b21;
-}
-
-html[data-theme="dark"] .price-num {
-  color: #7dcea0;
-}
-
-html[data-theme="dark"] .flow li {
-  background: #111b21;
-}
 
 @media (max-width: 720px) {
   .page-demo .demo-chrome-inner {

@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Jawab otomatis pertanyaan berulang di WhatsApp. Staf mengambil alih chat dari satu Inbox kapan saja." />
   <meta name="theme-color" content="#103f33" />
+  <meta name="color-scheme" content="light" />
   <title>WA Bot | Jawab otomatis. Ambil alih kapan saja.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/home.css" />
 </head>
@@ -36,8 +37,13 @@
 
   <main id="konten">
     <section class="home-hero" aria-labelledby="hero-title">
+      <div class="hero-stage" aria-hidden="true">
+        <img class="deco deco-orb deco-orb-a" src="img/deco-orb.svg" width="120" height="120" alt="" />
+        <img class="deco deco-orb deco-orb-b" src="img/deco-orb.svg" width="80" height="80" alt="" />
+        <img class="deco deco-chat" src="img/deco-chat.svg" width="280" height="220" alt="" />
+      </div>
       <div class="home-hero-inner">
-        <div class="hero-copy">
+        <div class="hero-copy" data-reveal>
           <p class="home-kicker"><span aria-hidden="true"></span> Untuk bisnis yang melayani pelanggan lewat WhatsApp</p>
           <h1 id="hero-title">Jawab otomatis untuk setiap pertanyaan berulang. <em>Ambil alih kapan saja!</em></h1>
           <p class="hero-summary">Bot menjawab dari informasi usaha, produk, harga, dan stok yang Anda kelola. Saat pelanggan perlu bantuan langsung, staf bisa melanjutkan chat dari satu Inbox.</p>
@@ -48,96 +54,115 @@
           <p class="demo-note"><span aria-hidden="true">i</span> Demo berjalan di browser. Tidak mengirim pesan ke WhatsApp dan tidak meminta data pelanggan.</p>
         </div>
 
-        <figure class="hero-product">
-          <div class="product-window">
-            <div class="product-window-bar">
-              <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span>Inbox staf</span>
-              <span class="window-live"><i aria-hidden="true"></i> Preview Demo</span>
+        <figure class="hero-product" data-reveal>
+          <div class="product-scene">
+            <div class="product-window">
+              <div class="product-window-bar">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Inbox staf</span>
+                <span class="window-live"><i aria-hidden="true"></i> Preview Demo</span>
+              </div>
+              <img
+                src="img/inbox-dashboard.svg"
+                alt="Preview Demo inbox staf: daftar percakapan dan balasan admin dalam satu layar."
+                width="1200"
+                height="720"
+                fetchpriority="high"
+              />
             </div>
-            <img
-              src="img/inbox-dashboard.svg"
-              alt="Preview Demo inbox staf: daftar percakapan dan balasan admin dalam satu layar."
-              width="1200"
-              height="720"
-              fetchpriority="high"
-            />
+            <div class="float-chip float-chip-bot" aria-hidden="true"><i></i> Bot</div>
+            <div class="float-chip float-chip-wait" aria-hidden="true"><i></i> Menunggu</div>
+            <div class="float-chip float-chip-admin" aria-hidden="true"><i></i> Admin</div>
           </div>
           <figcaption class="hero-product-caption">
             <span class="caption-mark" aria-hidden="true">↗</span>
-            <span><b>Bot menjawab.</b> Staf tetap memegang kendali.</span>
+            <span><b>Bot menjawab FAQ, produk, dan stok.</b> Staf mengambil alih dari Inbox kapan saja.</span>
           </figcaption>
         </figure>
       </div>
     </section>
 
     <section class="question-strip" aria-label="Satu Inbox untuk melayani pelanggan">
-      <div class="question-strip-inner">
-        <span>Satu Inbox untuk melayani pelanggan</span>
-        <p>FAQ otomatis</p>
-        <p>Produk &amp; stok</p>
-        <p>Segmentasi kontak</p>
-        <p>Broadcast</p>
+      <div class="question-strip-label">Satu Inbox untuk melayani pelanggan</div>
+      <div class="question-marquee" data-reveal>
+        <div class="question-track">
+          <p>Jam buka sampai jam berapa?</p>
+          <p>Harga dan stok produk ada?</p>
+          <p>Lokasi dan cara order?</p>
+          <p>Bisa bicara dengan staf?</p>
+          <p aria-hidden="true">Jam buka sampai jam berapa?</p>
+          <p aria-hidden="true">Harga dan stok produk ada?</p>
+          <p aria-hidden="true">Lokasi dan cara order?</p>
+          <p aria-hidden="true">Bisa bicara dengan staf?</p>
+        </div>
       </div>
     </section>
 
     <section class="home-section feature-section" id="fitur" aria-labelledby="feature-title">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="section-index">FITUR UTAMA</p>
         <h2 id="feature-title">Satu nomor WhatsApp, bot dan staf bekerja bersama.</h2>
         <p>Bot menangani pertanyaan yang sudah disiapkan. Staf tetap bisa membaca percakapan dan membalas ketika pelanggan membutuhkan bantuan lebih lanjut.</p>
       </div>
-      <ul class="feature-list">
-        <li>
+      <ul class="feature-board">
+        <li class="feature-lead" data-reveal>
+          <span class="feature-icon" aria-hidden="true">01</span>
           <h3>Balasan otomatis dari info usaha</h3>
-          <p>Siapkan FAQ, jam buka, alamat, harga, dan detail layanan. Bot memakai informasi itu untuk menjawab pertanyaan yang cocok.</p>
+          <p>Siapkan FAQ, jam buka, alamat, harga, dan detail layanan. Bot menggunakan informasi tersebut untuk menjawab pertanyaan yang sesuai.</p>
         </li>
-        <li>
+        <li data-reveal>
+          <span class="feature-icon" aria-hidden="true">02</span>
           <h3>Staf bisa mengambil alih chat</h3>
-          <p>Saat perlu orang, staf membalas dari Inbox. Bot berhenti membalas pada percakapan yang sedang diambil alih.</p>
+          <p>Saat percakapan perlu ditangani manusia, staf membalas dari Inbox. Bot berhenti membalas pada percakapan yang sedang diambil alih, sesuai mekanisme sistem.</p>
         </li>
-        <li>
+        <li data-reveal>
+          <span class="feature-icon" aria-hidden="true">03</span>
           <h3>Kontak dan chat lebih teratur</h3>
-          <p>Kelompokkan kontak, cari percakapan, dan pakai segmentasi untuk membedakan pelanggan serta kontak yang perlu ditinjau sebagai spam.</p>
+          <p>Kelompokkan kontak, cari percakapan, dan gunakan segmentasi untuk membedakan kelompok pelanggan serta kontak yang perlu ditinjau sebagai spam.</p>
         </li>
-        <li>
+        <li data-reveal>
+          <span class="feature-icon" aria-hidden="true">04</span>
           <h3>Produk dan stok terkelola</h3>
-          <p>Perbarui produk di sistem supaya bot bisa jawab detail, harga, dan ketersediaan berdasarkan data yang tersimpan.</p>
+          <p>Perbarui informasi produk di sistem agar bot dapat menjawab pertanyaan tentang detail, harga, dan ketersediaan stok berdasarkan data yang tersimpan.</p>
         </li>
-        <li>
+        <li data-reveal>
+          <span class="feature-icon" aria-hidden="true">05</span>
           <h3>Broadcast lebih terarah</h3>
-          <p>Kirim pesan ke segmen kontak yang dipilih. Tetap ikuti persetujuan penerima, template, dan ketentuan WhatsApp.</p>
+          <p>Kirim pesan ke segmen kontak yang dipilih. Pengiriman tetap harus mengikuti persetujuan penerima, template, dan ketentuan WhatsApp.</p>
         </li>
       </ul>
     </section>
 
-    <section class="home-section flow-section" id="cara-kerja" aria-labelledby="flow-title">
-      <div class="section-heading">
-        <p class="section-index">CARA KERJA</p>
-        <h2 id="flow-title">Dari pertanyaan masuk sampai ditangani staf.</h2>
+    <section class="flow-band" id="cara-kerja" aria-labelledby="flow-title">
+      <div class="flow-band-inner">
+        <div class="section-heading" data-reveal>
+          <p class="section-index">CARA KERJA</p>
+          <h2 id="flow-title">Dari pertanyaan masuk sampai ditangani staf.</h2>
+        </div>
+        <ol class="flow-rail">
+          <li data-reveal>
+            <span class="flow-number">01</span>
+            <div><h3>Pelanggan mengirim pesan</h3><p>Pelanggan tetap menghubungi nomor WhatsApp bisnis Anda.</p></div>
+          </li>
+          <li data-reveal>
+            <span class="flow-number">02</span>
+            <div><h3>Bot memberi jawaban</h3><p>Bot membalas pertanyaan yang cocok dengan informasi usaha yang sudah disiapkan.</p></div>
+          </li>
+          <li data-reveal>
+            <span class="flow-number">03</span>
+            <div><h3>Staf mengambil alih</h3><p>Jika perlu, staf melanjutkan percakapan melalui Inbox.</p></div>
+          </li>
+          <li data-reveal>
+            <span class="flow-number">04</span>
+            <div><h3>Bot aktif kembali</h3><p>Setelah staf selesai, chat dapat dikembalikan ke mode bot.</p></div>
+          </li>
+        </ol>
       </div>
-      <ol class="simple-flow flow-four">
-        <li>
-          <span class="flow-number">01</span>
-          <div><h3>Pelanggan mengirim pesan</h3><p>Pelanggan tetap menghubungi nomor WhatsApp bisnis Anda.</p></div>
-        </li>
-        <li>
-          <span class="flow-number">02</span>
-          <div><h3>Bot memberi jawaban</h3><p>Bot membalas pertanyaan yang cocok dengan informasi usaha yang sudah disiapkan.</p></div>
-        </li>
-        <li>
-          <span class="flow-number">03</span>
-          <div><h3>Staf mengambil alih</h3><p>Jika perlu, staf melanjutkan percakapan melalui Inbox.</p></div>
-        </li>
-        <li>
-          <span class="flow-number">04</span>
-          <div><h3>Bot aktif kembali</h3><p>Setelah staf selesai, chat dapat dikembalikan ke mode bot.</p></div>
-        </li>
-      </ol>
     </section>
 
     <section class="fallback-section" aria-labelledby="fallback-title">
-      <div class="fallback-inner">
+      <img class="deco deco-orb deco-orb-c" src="img/deco-orb.svg" width="100" height="100" alt="" aria-hidden="true" />
+      <div class="fallback-inner" data-reveal>
         <p class="section-index">BATAS YANG JELAS</p>
         <h2 id="fallback-title">Kalau bot tidak tahu jawabannya?</h2>
         <p>Bot hanya menjawab berdasarkan informasi yang Anda siapkan. Jika pertanyaan tidak dikenali atau informasinya belum tersedia, pelanggan diarahkan untuk menunggu bantuan staf.</p>
@@ -147,7 +172,7 @@
 
     <section class="inbox-section" id="demo" aria-labelledby="demo-title">
       <div class="inbox-section-inner">
-        <div class="inbox-copy">
+        <div class="inbox-copy" data-reveal>
           <p class="section-index">DEMO</p>
           <h2 id="demo-title">Coba alur bot dan Inbox sebelum memutuskan.</h2>
           <p>Lihat contoh percakapan pelanggan, balasan bot, dan cara staf mengambil alih chat. Demo ini berjalan di browser dan tidak terhubung ke nomor WhatsApp Anda.</p>
@@ -158,89 +183,95 @@
           </ul>
           <a class="home-btn home-btn-dark demo-cta" href="demo.html">Buka Demo</a>
         </div>
-        <div class="inbox-image-wrap">
-          <img
-            src="img/inbox-dashboard.svg"
-            alt="Tampilan inbox dengan chat pelanggan, status bot dan admin, serta kolom untuk membalas."
-            width="1200"
-            height="720"
-            loading="lazy"
-          />
-          <span class="image-caption">Preview Demo · Inbox staf</span>
+        <div class="inbox-visual" data-reveal>
+          <div class="inbox-image-wrap is-tilted">
+            <img
+              src="img/inbox-dashboard.svg"
+              alt="Tampilan inbox dengan chat pelanggan, status bot dan admin, serta kolom untuk membalas."
+              width="1200"
+              height="720"
+              loading="lazy"
+            />
+            <span class="image-caption">Preview Demo · Inbox staf</span>
+          </div>
+          <img class="deco deco-chat deco-chat-demo" src="img/deco-chat.svg" width="220" height="170" alt="" aria-hidden="true" />
         </div>
       </div>
     </section>
 
     <section class="home-section price-section" id="harga" aria-labelledby="price-title">
-      <div class="section-heading price-heading">
+      <div class="section-heading price-heading" data-reveal>
         <p class="section-index">HARGA</p>
         <h2 id="price-title">Mulai dengan biaya ringan. Pilih paket bulanan sesuai kebutuhan.</h2>
         <p>Biaya aktivasi dibayar sekali. Langganan mencakup akses sistem dan layanan sesuai paket. Tagihan penggunaan WhatsApp dari Meta dibayar terpisah.</p>
       </div>
       <div class="price-cards">
-        <article>
+        <article data-reveal>
           <p>Starter</p>
           <h3>Rp99.000 <span>/bulan</span></h3>
           <p class="price-activation">Biaya aktivasi Rp299.000</p>
           <p class="price-description">Untuk usaha kecil yang ingin mulai merapikan chat pelanggan.</p>
           <ul>
             <li>1 nomor WhatsApp</li>
-            <li>Bot FAQ dan Inbox</li>
-            <li>Produk, harga, dan stok</li>
+            <li>Akses bot FAQ dan Inbox</li>
+            <li>Pengelolaan produk, harga, dan stok</li>
             <li>Segmentasi kontak dan pencarian chat</li>
             <li>Broadcast sesuai ketentuan Meta</li>
             <li>Bantuan penggunaan dasar</li>
           </ul>
           <a class="home-btn home-btn-dark" href="https://wa.me/6281233069610?text=Halo%20Rendy%2C%20saya%20ingin%20paket%20Starter%20WA%20Bot." target="_blank" rel="noopener noreferrer">Pilih Starter</a>
         </article>
-        <article class="is-featured">
-          <p>Business <span>Tim kecil</span></p>
+        <article class="is-featured" data-reveal>
+          <p>Business</p>
           <h3>Rp199.000 <span>/bulan</span></h3>
           <p class="price-activation">Biaya aktivasi Rp499.000</p>
           <p class="price-description">Untuk usaha dengan beberapa staf dan aktivitas pelanggan lebih tinggi.</p>
           <ul>
             <li>Semua fitur Starter</li>
             <li>Kapasitas penggunaan lebih besar</li>
-            <li>Beberapa akun staf</li>
-            <li>Segmentasi dan broadcast untuk tim</li>
+            <li>Pengelolaan beberapa akun staf</li>
+            <li>Segmentasi dan broadcast untuk kebutuhan tim</li>
             <li>Prioritas bantuan pada hari kerja</li>
           </ul>
           <a class="home-btn home-btn-lime" href="https://wa.me/6281233069610?text=Halo%20Rendy%2C%20saya%20ingin%20paket%20Business%20WA%20Bot." target="_blank" rel="noopener noreferrer">Pilih Business</a>
         </article>
-        <article>
+        <article data-reveal>
           <p>Custom</p>
-          <h3>Konsultasikan <span>kebutuhan</span></h3>
-          <p class="price-activation">Multi-nomor, integrasi, atau alur khusus</p>
-          <p class="price-description">Ruang lingkup, waktu, dan harga final disepakati dulu sebelum pekerjaan dimulai.</p>
+          <h3>Konsultasikan kebutuhan</h3>
+          <p class="price-description">Untuk kebutuhan multi-nomor, integrasi eksternal, atau alur kerja khusus.</p>
           <ul>
             <li>Kebutuhan di luar paket standar</li>
-            <li>Estimasi tertulis sebelum mulai</li>
+            <li>Estimasi waktu dan biaya disepakati sebelum mulai</li>
           </ul>
           <a class="home-btn home-btn-dark" href="https://wa.me/6281233069610?text=Halo%20Rendy%2C%20saya%20ingin%20konsultasi%20Custom%20WA%20Bot." target="_blank" rel="noopener noreferrer">Konsultasikan Kebutuhan</a>
         </article>
       </div>
-      <p class="extra-costs">
-        <span>Biaya aktivasi sekali. Langganan bulanan.</span>
+      <p class="extra-costs" data-reveal>
+        <span>Biaya aktivasi dibayar satu kali. Langganan dibayar bulanan.</span>
         <span>Biaya pesan Meta, domain, dan layanan pihak ketiga tidak termasuk.</span>
         <span>Fitur atau integrasi di luar paket dihitung terpisah.</span>
       </p>
+      <div class="support-note" aria-labelledby="support-title" data-reveal>
+        <h3 id="support-title">Ada bantuan saat Anda membutuhkan.</h3>
+        <p>Setiap paket mencakup bantuan penggunaan sesuai batas paket. Penanganan gangguan, perubahan konfigurasi, dan pekerjaan tambahan memiliki cakupan yang dijelaskan sejak awal.</p>
+      </div>
     </section>
 
     <section class="home-section costs-section" id="biaya-luar" aria-labelledby="costs-title">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="section-index">BIAYA EKSTERNAL</p>
         <h2 id="costs-title">Biaya apa saja di luar langganan?</h2>
       </div>
       <ul class="costs-list">
-        <li>
+        <li data-reveal>
           <h3>WhatsApp / Meta</h3>
-          <p>WhatsApp Business Platform bisa dikenakan biaya berdasarkan kategori dan jumlah pesan. Tarif mengikuti Meta dan bisa berubah. Terpisah dari aktivasi dan langganan WA Bot.</p>
+          <p>Penggunaan WhatsApp Business Platform dapat dikenakan biaya berdasarkan kategori dan jumlah pesan yang dikirim. Tarif mengikuti ketentuan Meta dan dapat berubah. Biaya ini terpisah dari biaya aktivasi dan langganan WA Bot.</p>
         </li>
-        <li>
+        <li data-reveal>
           <h3>Hosting dan layanan pendukung</h3>
-          <p>Hosting bisa memakai free tier selama masih sesuai batas penyedia. Kalau perlu layanan berbayar, biayanya dijelaskan dulu untuk persetujuan. Tidak ada janji gratis selamanya.</p>
+          <p>Hosting dapat menggunakan free tier selama kebutuhan masih sesuai batas dan ketentuan penyedia. Jika dibutuhkan layanan berbayar, biaya dan alasannya akan disampaikan untuk persetujuan sebelum diaktifkan. Tidak ada janji gratis selamanya.</p>
         </li>
-        <li>
+        <li data-reveal>
           <h3>Layanan tambahan</h3>
           <p>Domain, database berbayar, penyimpanan tambahan, API AI, integrasi POS, dan layanan pihak ketiga lain tidak otomatis termasuk paket.</p>
         </li>
@@ -248,11 +279,11 @@
     </section>
 
     <section class="home-section faq-section" id="faq" aria-labelledby="faq-title">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="section-index">FAQ</p>
         <h2 id="faq-title">Yang biasanya ditanyakan sebelum mulai.</h2>
       </div>
-      <div class="faq-list">
+      <div class="faq-list" data-reveal>
         <details>
           <summary>Apakah ada biaya bulanan?</summary>
           <p>Ya. Ada biaya langganan sesuai paket, selain biaya aktivasi satu kali. Biaya penggunaan WhatsApp dari Meta dihitung terpisah.</p>
@@ -263,29 +294,38 @@
         </details>
         <details>
           <summary>Apakah ada biaya dari WhatsApp atau Meta?</summary>
-          <p>Bisa ada. Biaya WhatsApp Business Platform mengikuti kategori pesan, negara penerima, dan pemakaian. Biaya tersebut tidak termasuk aktivasi maupun langganan WA Bot.</p>
+          <p>Bisa ada. Biaya WhatsApp Business Platform mengikuti kategori pesan, negara penerima, dan pemakaian. Biaya tersebut tidak termasuk biaya aktivasi maupun langganan WA Bot.</p>
         </details>
         <details>
           <summary>Apakah bot bisa menjawab semua pertanyaan?</summary>
-          <p>Tidak. Bot menjawab berdasarkan FAQ dan informasi yang Anda siapkan. Pertanyaan di luar itu perlu ditangani staf.</p>
+          <p>Tidak. Bot menjawab berdasarkan FAQ dan informasi yang Anda siapkan. Pertanyaan di luar informasi tersebut perlu ditangani staf.</p>
         </details>
         <details>
-          <summary>Apakah sistem memakai WhatsApp API resmi?</summary>
+          <summary>Apakah pelanggan perlu mengunduh aplikasi?</summary>
+          <p>Tidak perlu aplikasi tambahan. Pelanggan menghubungi nomor WhatsApp bisnis yang digunakan pada implementasi.</p>
+        </details>
+        <details>
+          <summary>Apakah nomor WhatsApp dijamin tidak akan dibatasi?</summary>
+          <p>Tidak. Integrasi resmi bukan jaminan bebas pembatasan. Pengiriman pesan harus mematuhi kebijakan WhatsApp, termasuk persetujuan penerima dan ketentuan template untuk pesan tertentu.</p>
+        </details>
+        <details>
+          <summary>Apakah sistem menggunakan WhatsApp API resmi?</summary>
           <p>Ya. Sistem menggunakan WhatsApp Business Platform dari Meta melalui integrasi resmi. Penggunaan tetap mengikuti kebijakan WhatsApp dan biaya pesan Meta yang berlaku.</p>
-        </details>
-        <details>
-          <summary>Apakah nomor WhatsApp dijamin tidak dibatasi?</summary>
-          <p>Tidak. Integrasi resmi bukan jaminan bebas pembatasan. Pengiriman pesan harus mematuhi kebijakan WhatsApp, termasuk persetujuan penerima dan ketentuan template.</p>
         </details>
         <details>
           <summary>Apakah demo mengirim pesan sungguhan?</summary>
           <p>Tidak. Demo hanya simulasi browser untuk memperlihatkan alur pelanggan dan Inbox staf.</p>
         </details>
+        <details>
+          <summary>Bisakah saya menambah fitur?</summary>
+          <p>Bisa dievaluasi. Kebutuhan, estimasi waktu, dan biaya akan disepakati sebelum pekerjaan dimulai.</p>
+        </details>
       </div>
     </section>
 
     <section class="contact-section" aria-labelledby="contact-title">
-      <div class="contact-inner">
+      <img class="deco deco-orb deco-orb-d" src="img/deco-orb.svg" width="140" height="140" alt="" aria-hidden="true" />
+      <div class="contact-inner" data-reveal>
         <p class="section-index">MULAI DARI KEBUTUHAN USAHA ANDA</p>
         <h2 id="contact-title">Coba demonya. Lihat apakah alurnya cocok untuk tim Anda.</h2>
         <p class="contact-lede">Ceritakan pertanyaan yang paling sering diterima dan siapa saja yang membalas chat. Kami bantu tentukan paket yang sesuai.</p>
@@ -314,5 +354,6 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3A2.2 2.2 0 1 1 5.2 7.4 2.2 2.2 0 0 1 5.2 3ZM3.3 9h3.8v12H3.3V9Zm6.1 0H13v1.6h.1c.5-.9 1.7-1.9 3.6-1.9 3.9 0 4.6 2.5 4.6 5.7V21h-3.8v-5.8c0-1.4 0-3.3-2-3.3s-2.3 1.5-2.3 3.2V21H9.4V9Z"/></svg>
     </a>
   </footer>
+  <script src="js/motion.js" defer></script>
 </body>
 </html>

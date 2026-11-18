@@ -511,6 +511,8 @@ Implikasi: harga awal WA Bot perlu terasa terjangkau untuk UMKM, tetapi kuota da
 | chat-bg | `#eae6df` | Latar chat |
 | mine | `#d9fdd3` | Bubble pesan |
 
+Implementasi CSS memakai token semantik `--home-*` / `--demo-*` / `:root` dari palet di atas. Dark mode opsional via `data-theme` (override token, bukan palet baru).
+
 ### Typography
 
 - IBM Plex Sans untuk heading dan body.

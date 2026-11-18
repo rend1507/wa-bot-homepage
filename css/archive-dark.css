@@ -1,0 +1,101 @@
+/* ARCHIVE — dark mode (tidak di-load). Dipindah 2026-11-18. */
+
+/* dari home.css */
+html[data-theme="dark"] .page-home {
+  --home-ink: #eef3ef;
+  --home-ink-soft: #c5d4cb;
+  --home-muted: #a8b8af;
+  --home-paper: #0b1410;
+  --home-surface: #121c18;
+  --home-surface-2: #152019;
+  --home-white: #152019;
+  --home-green: #0e342a;
+  --home-green-hover: #164a3c;
+  --home-green-mid: #7dcea0;
+  --home-green-label: #8fbf9f;
+  --home-green-flow: #8fbf9f;
+  --home-green-light: #1a332b;
+  --home-green-tint: #1a332b;
+  --home-lime: #c9ef74;
+  --home-lime-hover: #dcf69f;
+  --home-lime-ink: #172b20;
+  --home-border: #2a3a33;
+  --home-border-strong: #2a3a33;
+  --home-border-chip: #33443c;
+  --home-on-green: #eef3ef;
+  --home-on-green-muted: #c5d4cb;
+  --home-on-green-soft: #a8b8af;
+  --home-on-green-line: #5f7a6c;
+  --home-focus: #e3a940;
+  --home-footer: #07150f;
+  --home-status-bot: #3d9aa8;
+  --home-status-wait: #d4922a;
+  --home-status-admin: #8fa399;
+  --home-live: #a3c46a;
+  --home-dot: #3a4a42;
+  --home-window-muted: #a8b8af;
+  --home-window-bg: #121c18;
+  --home-header-bg: color-mix(in srgb, var(--home-paper) 96%, transparent);
+  --home-scrim: rgba(0, 0, 0, 0.35);
+  --home-on-green-border: color-mix(in srgb, var(--home-on-green) 35%, transparent);
+  --home-on-green-fill: color-mix(in srgb, var(--home-on-green) 8%, transparent);
+  --home-shadow-lift: 0 0.5rem 1.25rem var(--home-scrim);
+}
+
+/* dari styles.css */
+html[data-theme="dark"] .page-demo {
+  --demo-ink: #eef3ef;
+  --demo-muted: #a8b8af;
+  --demo-paper: #0b1410;
+  --demo-green: #0e342a;
+  --demo-green-hover: #164a3c;
+  --demo-green-mid: #7dcea0;
+  --demo-lime: #c9ef74;
+  --demo-line: #2a3a33;
+  --demo-header-bg: color-mix(in srgb, var(--demo-paper) 96%, transparent);
+}
+
+/* dari styles.css */
+html[data-theme="dark"] .view-switch {
+  background: var(--demo-paper);
+}
+
+/* dari styles.css */
+html[data-theme="dark"] {
+  --ink: #eef3ef;
+  --paper: #0b1410;
+  --panel: #152019;
+  --line: #2a3a33;
+  --muted: #a8b8af;
+  --brand: #0e342a;
+  --brand2: #7dcea0;
+  --brand-deep: #7dcea0;
+  --accent: #e3a940;
+}
+
+/* dari styles.css */
+html[data-theme="dark"] .btn-ghost {
+  border-color: #aebac1;
+  color: #e9edef;
+}
+
+/* dari styles.css */
+html[data-theme="dark"] .btn-ghost:hover:not(:disabled) {
+  background: #e9edef;
+  color: #111b21;
+}
+
+/* dari styles.css */
+html[data-theme="dark"] .price-num {
+  color: #7dcea0;
+}
+
+/* dari styles.css */
+html[data-theme="dark"] .flow li {
+  background: #111b21;
+}
+
+
+/* theme-toggle icon swap (arsip) */
+html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }

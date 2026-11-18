@@ -1,7 +1,7 @@
 # WA Bot · promo + demo lokal
 
 Landing jual bot WhatsApp + inbox staf, plus demo di browser.  
-Diskusi: `Diskusi/ide-monetisasi-resource/a2-presentasi-wa-bot-2026-11-03.md` · antrian clone: `Diskusi/wa-bot-clone-template/`
+Diskusi / Antrian: `Diskusi/wa-bot-home-promo/` · clone Worker: `Diskusi/wa-bot-clone-template/`
 
 Situs publik: https://wabot-home.pages.dev
 
@@ -21,6 +21,8 @@ python3 -m http.server 4180
 | `css/home.css` | Gaya khusus homepage |
 | `demo.html` | Jendela pengguna + inbox staf (layout produk) |
 | `js/demo.js` | Simulasi menu, ambil alih, filter antrean |
+| `js/motion.js` | Scroll reveal (hormati reduced-motion) |
+| `css/archive-dark.css` | Arsip dark mode (tidak di-load) |
 | `img/inbox-dashboard.svg` | Ilustrasi pratinjau inbox dan status chat |
 | `DESIGN.md` | Arah visual + harga publik |
 
