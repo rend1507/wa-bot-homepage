@@ -39,7 +39,7 @@
   --home-on-green-fill: color-mix(in srgb, var(--home-on-green) 10%, transparent);
   --home-max: 76rem;
   --home-pad-x: 1.5rem;
-  --home-header-h: 4.5rem;
+  --home-header-h: 3.75rem;
   --home-radius: 0.25rem;
   --home-radius-md: 0.375rem;
   --home-radius-lg: 0.5rem;
@@ -173,13 +173,13 @@
 
 .home-hero-inner {
   width: min(100% - 3rem, var(--home-max));
-  min-height: 39rem;
+  min-height: 0;
   margin: 0 auto;
-  padding: clamp(4rem, 8vw, 7.25rem) 0;
+  padding: clamp(2.25rem, 4.5vw, 3.5rem) 0;
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   align-items: center;
-  gap: clamp(2.5rem, 6vw, 5.5rem);
+  gap: clamp(1.5rem, 4vw, 3rem);
 }
 
 .hero-copy {
@@ -187,7 +187,7 @@
 }
 
 .home-kicker {
-  margin: 0 0 1.35rem;
+  margin: 0 0 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -207,10 +207,10 @@
 .hero-copy h1 {
   max-width: 16em;
   margin: 0;
-  font-size: clamp(2.15rem, 4vw, 3.35rem);
+  font-size: clamp(1.95rem, 3.6vw, 2.85rem);
   font-weight: 600;
-  letter-spacing: -0.045em;
-  line-height: 1.08;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
 }
 
 .hero-copy h1 em {
@@ -220,18 +220,18 @@
 
 .hero-summary {
   max-width: 31rem;
-  margin: 1.5rem 0 0;
+  margin: 0.9rem 0 0;
   color: var(--home-on-green-muted);
-  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
-  line-height: 1.6;
+  font-size: clamp(1.02rem, 1.3vw, 1.12rem);
+  line-height: 1.5;
 }
 
 .home-hero-actions {
-  margin-top: 1.8rem;
+  margin-top: 1.15rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.3rem;
+  gap: 1rem;
 }
 
 .hero-text-link {
@@ -241,7 +241,7 @@
 }
 
 .demo-note {
-  margin: 1.25rem 0 0;
+  margin: 0.85rem 0 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -382,7 +382,7 @@
 .home-section {
   width: min(100% - 3rem, var(--home-max));
   margin: 0 auto;
-  padding: clamp(4rem, 7vw, 6.5rem) 0;
+  padding: clamp(2.25rem, 4vw, 3.5rem) 0;
 }
 
 .section-heading {
@@ -390,7 +390,7 @@
 }
 
 .section-index {
-  margin: 0 0 0.9rem;
+  margin: 0 0 0.5rem;
   color: var(--home-green-label);
   font-size: 0.74rem;
   font-weight: 700;
@@ -401,19 +401,19 @@
 .inbox-copy h2,
 .contact-inner h2 {
   margin: 0;
-  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-size: clamp(1.65rem, 3.2vw, 2.55rem);
   font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.08;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
 }
 
 .section-heading > p:last-child,
 .inbox-copy > p:not(.section-index) {
   max-width: 35rem;
-  margin: 1rem 0 0;
+  margin: 0.65rem 0 0;
   color: var(--home-muted);
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .feature-list {
@@ -502,7 +502,7 @@
 .inbox-section-inner {
   width: min(100% - 3rem, var(--home-max));
   margin: 0 auto;
-  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+  padding: clamp(2.25rem, 4vw, 3.5rem) 0;
   display: grid;
   grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
   align-items: center;
@@ -558,6 +558,7 @@
   min-width: 0;
   padding: 0.45rem;
   position: relative;
+  z-index: 1;
   border: 1px solid var(--home-border);
   border-radius: var(--home-radius-lg);
   background: var(--home-white);
@@ -585,23 +586,23 @@
 .fallback-inner {
   width: min(100% - 3rem, var(--home-max));
   margin: 0 auto;
-  padding: clamp(3.5rem, 6vw, 5rem) 0;
+  padding: clamp(2rem, 3.5vw, 3rem) 0;
   max-width: 40rem;
 }
 
 .fallback-inner h2 {
   margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.65rem, 3.2vw, 2.4rem);
   font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.08;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
 }
 
 .fallback-inner > p:not(.section-index) {
-  margin: 1rem 0 0;
+  margin: 0.65rem 0 0;
   color: var(--home-muted);
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .fallback-note {
@@ -610,18 +611,18 @@
 }
 
 .demo-cta {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .price-section {
-  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+  padding-bottom: clamp(2rem, 3.5vw, 3rem);
 }
 
 .price-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 0.5rem;
+  gap: 0.75rem;
+  margin-top: 1.1rem;
 }
 
 .price-cards article {
@@ -849,9 +850,20 @@
   font-weight: 700;
 }
 
+.faq-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 18rem);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.faq-main {
+  min-width: 0;
+}
+
 .faq-list {
   max-width: 40rem;
-  margin-top: 1.5rem;
+  margin-top: 1.15rem;
   border-top: 1px solid var(--home-border);
 }
 
@@ -871,6 +883,21 @@
   line-height: 1.55;
 }
 
+.faq-visual {
+  position: sticky;
+  top: 5.5rem;
+  justify-self: end;
+  width: min(100%, 18rem);
+  margin-top: 0.35rem;
+  pointer-events: none;
+}
+
+.faq-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .contact-section {
   background: var(--home-green);
   color: var(--home-on-green);
@@ -879,7 +906,7 @@
 .contact-inner {
   width: min(100% - 3rem, var(--home-max));
   margin: 0 auto;
-  padding: clamp(3.75rem, 7vw, 6rem) 0;
+  padding: clamp(2.25rem, 4vw, 3.5rem) 0;
 }
 
 .contact-inner .section-index {
@@ -891,7 +918,7 @@
 }
 
 .contact-actions {
-  margin-top: 1.6rem;
+  margin-top: 1.1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -958,6 +985,14 @@
 
   .price-cards {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .faq-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-visual {
+    display: none;
   }
 }
 
@@ -1037,8 +1072,8 @@
   }
 
   .home-hero-inner {
-    padding: 3.5rem 0 3rem;
-    gap: 2.25rem;
+    padding: 2rem 0 1.75rem;
+    gap: 1.5rem;
   }
 
   .home-kicker {
@@ -1052,13 +1087,13 @@
   }
 
   .hero-copy h1 {
-    max-width: 10ch;
-    font-size: clamp(3.05rem, 14vw, 4rem);
+    max-width: 12ch;
+    font-size: clamp(2.15rem, 9.5vw, 2.85rem);
   }
 
   .hero-summary {
-    margin-top: 1.15rem;
-    font-size: 1rem;
+    margin-top: 0.75rem;
+    font-size: 0.98rem;
   }
 
   .home-hero-actions {
@@ -1265,11 +1300,15 @@
 
 .deco-chat-demo {
   position: absolute;
-  right: -1rem;
-  bottom: -1.5rem;
-  width: 11rem;
+  right: 0.25rem;
+  top: calc(100% + 0.35rem);
+  bottom: auto;
+  left: auto;
+  z-index: 0;
+  width: 9.5rem;
   opacity: 0.85;
   transform: rotate(6deg);
+  pointer-events: none;
   animation: float-tilt 6s ease-in-out infinite reverse;
 }
 
@@ -1340,8 +1379,8 @@
 
 .question-strip {
   display: grid;
-  gap: 0.75rem;
-  padding: 1.25rem 0 1.5rem;
+  gap: 0.45rem;
+  padding: 0.85rem 0 1rem;
   background:
     linear-gradient(90deg, var(--home-lime), transparent 28%),
     var(--home-surface-2);
@@ -1372,12 +1411,12 @@
 
 .question-track p {
   margin: 0;
-  padding: 0.65rem 1rem;
+  padding: 0.45rem 0.85rem;
   border: 1px solid var(--home-border);
   border-radius: 999px;
   background: var(--home-white);
   color: var(--home-green);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -1385,16 +1424,16 @@
 .feature-list { display: none; }
 
 .feature-board {
-  margin: 2.5rem 0 0;
+  margin: 1.35rem 0 0;
   padding: 0;
   list-style: none;
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .feature-board li {
-  padding: 1.35rem 1.25rem;
+  padding: 1rem 1.05rem;
   border: 1px solid var(--home-border);
   border-radius: var(--home-radius-lg);
   background: var(--home-white);
@@ -1413,7 +1452,7 @@
 
 .feature-icon {
   display: inline-flex;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.5rem;
   color: var(--home-green-mid);
   font-family: var(--mono);
   font-size: 0.78rem;
@@ -1441,7 +1480,7 @@
 .flow-band-inner {
   width: min(100% - 3rem, var(--home-max));
   margin: 0 auto;
-  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+  padding: clamp(2.25rem, 4vw, 3.5rem) 0;
 }
 
 .flow-band .section-index {
@@ -1454,12 +1493,12 @@
 }
 
 .flow-rail {
-  margin: 2.5rem 0 0;
+  margin: 1.35rem 0 0;
   padding: 0;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.85rem;
   position: relative;
 }
 
@@ -1517,6 +1556,8 @@
 .inbox-visual {
   position: relative;
   min-width: 0;
+  /* ruang deco di bawah preview agar tidak numpang ke kartu */
+  padding-bottom: 7.5rem;
 }
 
 .inbox-image-wrap.is-tilted {
@@ -1600,6 +1641,10 @@
   .float-chip,
   .deco-chat-demo {
     display: none;
+  }
+
+  .inbox-visual {
+    padding-bottom: 0;
   }
 
   .product-window {
